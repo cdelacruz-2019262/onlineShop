@@ -7,6 +7,7 @@ import helmet from 'cors'
 import cors from 'cors'
 import categoryRoutes from "../src/category/category.routes.js"
 import productRoutes from "../src/product/product.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 
 //Configs
 const app = express()
@@ -23,7 +24,7 @@ app.use(morgan('dev')) //Logs de solicitudes al servidor HTTP
 //declaracion de rutas
 app.use('/category', categoryRoutes)
 app.use('/product', productRoutes)
-
+app.use('/user', userRoutes)
 
 //levantar el server(revisar que si prende)
 export const initServer = ()=>{

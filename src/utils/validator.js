@@ -10,12 +10,22 @@ export const encrypt = async (password) => {
     }
 }
 
+//Validar la contraseña
+export const checkPassword = async (password, hash) => {
+    try {
+        return await compare(password, hash)
+    } catch (err) {
+        console.error(err);
+        return err
+    }
+}
+
 export const checkCategoryUpdate = (data, Id) => {
     if (Id) {
         if (Object.entries(data).length === 0)
             return false
         {
-            return true 
+            return true
         }
     }
 }
@@ -25,7 +35,7 @@ export const checkProductUpdate = (data, Id) => {
         if (Object.entries(data).length === 0)
             return false
         {
-            return true 
+            return true
         }
     }
 }
