@@ -1,0 +1,287 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tienda online",
+    "dateExported": "2024-02-23T04:55:04.887Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "category",
+            "containerId": "",
+            "created": "2024-02-22T21:36:25.178Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "product",
+            "containerId": "",
+            "created": "2024-02-23T02:53:49.788Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "557e97e8-40dc-4167-b1e9-9b4e4332d46e",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "get category",
+            "url": "localhost:2656/category/get",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-22T21:36:14.762Z",
+            "modified": "2024-02-23T00:29:43.548Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c608ae32-766c-46f1-b72a-34ca6a6d7f8b",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "test category",
+            "url": "localhost:2656/category/test",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-22T21:39:54.138Z",
+            "modified": "2024-02-22T21:39:54.138Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "06c9cd5a-8e52-420b-8d4b-5979d560a229",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "save category",
+            "url": "localhost:2656/category/save",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-22T21:40:15.404Z",
+            "modified": "2024-02-22T21:40:15.404Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "cleaners"
+                    },
+                    {
+                        "name": "description",
+                        "value": "household cleaning items"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fad91bed-a6c4-4e60-a7f0-69c1db327fb5",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "delete category",
+            "url": "localhost:2656/category/delete/65d7e6cdb0f65f788168c7e9",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-22T23:28:32.794Z",
+            "modified": "2024-02-23T00:30:10.723Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5e8c655e-8d40-4459-8e63-da372d2e98b0",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "search category",
+            "url": "localhost:2656/category/search",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-22T21:54:59.269Z",
+            "modified": "2024-02-22T22:30:54.717Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "cleaners"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f2f0611-a1e1-42b9-bbd9-50f83c903b7c",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "6b8b9fa5-217c-422d-9cca-652a494eb226",
+            "name": "update category",
+            "url": "localhost:2656/category/update/65d7fbfc9866d51617492bf8",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-02-23T01:07:30.585Z",
+            "modified": "2024-02-23T02:01:37.696Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "cleaners",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "description",
+                        "value": "household cleaning items"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3622e5ef-47b0-4bc2-be3d-8c974b511fe8",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "test product",
+            "url": "localhost:2656/product/test",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-23T02:54:04.772Z",
+            "modified": "2024-02-23T03:02:31.216Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "45b2f586-25fd-4168-83f1-b334e11548eb",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "save product",
+            "url": "localhost:2656/product/save",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-02-23T03:09:38.126Z",
+            "modified": "2024-02-23T03:36:32.500Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "soap"
+                    },
+                    {
+                        "name": "description",
+                        "value": "soap to clean the clotches"
+                    },
+                    {
+                        "name": "price",
+                        "value": "100.00"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "5"
+                    },
+                    {
+                        "name": "category",
+                        "value": "65d7fbfc9866d51617492bf8"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f5bb5af1-79f3-4a59-b461-58d6109a606e",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "get product",
+            "url": "localhost:2656/product/get",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-02-23T03:39:38.234Z",
+            "modified": "2024-02-23T03:41:48.707Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3d6688f9-eb57-457e-bb16-be54dc8a8812",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "search product",
+            "url": "localhost:2656/product/search",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-02-23T03:48:03.149Z",
+            "modified": "2024-02-23T04:18:20.304Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "soap"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "810c1bc2-9bb2-4c92-9b68-f12aa70ecc1e",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "deleteproduct",
+            "url": "localhost:2656/product/delete/65d820c9a0c736bfc490ece0",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2024-02-23T03:58:41.805Z",
+            "modified": "2024-02-23T04:36:41.445Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5826eebe-3379-49ab-b0f5-ed67b6035c09",
+            "colId": "75af9648-c88d-46ff-852f-b1f4b067fe2e",
+            "containerId": "d737b85f-b1a0-4aa5-8e32-05f2532c3c36",
+            "name": "update product",
+            "url": "localhost:2656/product/update/65d81a483d370325c64d9552",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-02-23T04:33:12.831Z",
+            "modified": "2024-02-23T04:47:46.746Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "soap",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "description",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "category",
+                        "value": "65d81a483d370325c64d9552"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}

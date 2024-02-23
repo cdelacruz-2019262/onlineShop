@@ -1,7 +1,7 @@
 'use strict'
 
-import { Router } from 'express'
-import { test, save, get, search, erase, update } from './category.controller.js'
+import { Router } from "express"
+import { test, save, get, search, erase, update} from './product.controller.js'
 
 const api = Router()
 
