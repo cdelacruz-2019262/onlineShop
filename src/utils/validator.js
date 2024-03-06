@@ -39,3 +39,18 @@ export const checkProductUpdate = (data, Id) => {
         }
     }
 }
+
+export const checkUserUpdate = (data,id)=>{
+    if (id) {
+        if (
+            Object.entries(data).length === 0 ||
+            data.role ||
+            data.role == '' ||
+            data.password ||
+            data.password == '' 
+        ) {
+            return false
+        }
+        return true
+    }
+}
