@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tienda online",
-    "dateExported": "2024-03-06T06:06:47.860Z",
+    "dateExported": "2024-03-07T06:57:40.466Z",
     "version": "1.1",
     "folders": [
         {
@@ -43,6 +43,35 @@
             "tests": []
         },
         {
+            "_id": "65d116f0-504f-4829-b4a8-fdc519f046b2",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "",
+            "name": "login",
+            "url": "/user/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-06T04:04:15.887Z",
+            "modified": "2024-03-07T06:18:15.061Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "cdlc"
+                    },
+                    {
+                        "name": "password",
+                        "value": "1"
+                    }
+                ]
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
             "_id": "e227e8eb-89ac-471e-8936-43f62968faff",
             "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
             "containerId": "34633714-930c-49ac-adb3-2b5c58fe0462",
@@ -51,8 +80,13 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T04:04:15.874Z",
-            "modified": "2024-03-06T04:57:15.818Z",
-            "headers": [],
+            "modified": "2024-03-06T21:28:36.637Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": ""
+                }
+            ],
             "params": [],
             "reqType": "get",
             "tests": []
@@ -66,8 +100,13 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T04:04:15.875Z",
-            "modified": "2024-03-06T04:58:04.254Z",
-            "headers": [],
+            "modified": "2024-03-07T06:40:33.418Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZWY1Y2M1ZjAwNWM5NGJjOGEzMDIiLCJ1c2VybmFtZSI6ImNkbGMiLCJlbWFpbCI6ImNkbGNAZ21haWwuY29tIiwibmFtZSI6ImNhcmxvcyIsInN1cm5hbWUiOiJkZSBsYSBjcnV6Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NzkyMjk1LCJleHAiOjE3MDk4MDMwOTV9.3JXcTkSh7dvRvrMl39xFczP3tEvZykMrvutV90jlNYI"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "formencoded",
@@ -91,13 +130,19 @@
             "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
             "containerId": "34633714-930c-49ac-adb3-2b5c58fe0462",
             "name": "delete category",
-            "url": "localhost:2656/category/delete/65d7e6cdb0f65f788168c7e9",
+            "url": "/category/delete/65e964b5688ef57e6573eb46",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-03-06T04:04:15.877Z",
-            "modified": "2024-03-06T04:04:15.877Z",
-            "headers": [],
+            "modified": "2024-03-07T06:55:14.048Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZWY1Y2M1ZjAwNWM5NGJjOGEzMDIiLCJ1c2VybmFtZSI6ImNkbGMiLCJlbWFpbCI6ImNkbGNAZ21haWwuY29tIiwibmFtZSI6ImNhcmxvcyIsInN1cm5hbWUiOiJkZSBsYSBjcnV6Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NzkyMjk1LCJleHAiOjE3MDk4MDMwOTV9.3JXcTkSh7dvRvrMl39xFczP3tEvZykMrvutV90jlNYI"
+                }
+            ],
             "params": [],
+            "reqType": "del",
             "tests": []
         },
         {
@@ -360,28 +405,49 @@
             "tests": []
         },
         {
-            "_id": "65d116f0-504f-4829-b4a8-fdc519f046b2",
+            "_id": "90f090f5-0db7-4da4-b79f-79e921db1e5d",
             "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
             "containerId": "f8f3d6eb-c7ed-4608-b5bd-a38cbb8ce74b",
-            "name": "login",
-            "url": "/user/login",
+            "name": "save Admin",
+            "url": "/user/save/admin",
             "method": "POST",
             "sortNum": 170000,
-            "created": "2024-03-06T04:04:15.887Z",
-            "modified": "2024-03-06T06:04:19.481Z",
-            "headers": [],
+            "created": "2024-03-06T22:24:24.349Z",
+            "modified": "2024-03-06T22:33:49.409Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjFjMjhiYWRjYzcwYzI5NTUzY2QiLCJ1c2VybmFtZSI6ImRlZmF1bHQiLCJlbWFpbCI6ImRlZmF1bHRAZ21haWwuY29tIiwibmFtZSI6IkRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTc2NDMxOSwiZXhwIjoxNzA5Nzc1MTE5fQ.JDKvkGVlaKsYVmntdPZUtlB7lZwv9t3vWOD7m5wUybY"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "formencoded",
                 "raw": "",
                 "form": [
                     {
+                        "name": "name",
+                        "value": "carlos"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "de la cruz"
+                    },
+                    {
                         "name": "username",
-                        "value": "default"
+                        "value": "cdlc"
                     },
                     {
                         "name": "password",
                         "value": "1"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "58584270"
+                    },
+                    {
+                        "name": "email",
+                        "value": "cdlc@gmail.com"
                     }
                 ]
             },
@@ -428,22 +494,67 @@
             "tests": []
         },
         {
+            "_id": "fbfb3eb8-3ee7-4ec0-856d-0c288574856b",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "f8f3d6eb-c7ed-4608-b5bd-a38cbb8ce74b",
+            "name": "update password user",
+            "url": "/user/update/password/65e8ef5cc5f005c94bc8a302",
+            "method": "PUT",
+            "sortNum": 185000,
+            "created": "2024-03-06T23:56:35.500Z",
+            "modified": "2024-03-07T01:50:08.725Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZWY1Y2M1ZjAwNWM5NGJjOGEzMDIiLCJ1c2VybmFtZSI6ImNkbGMiLCJlbWFpbCI6ImNkbGNAZ21haWwuY29tIiwibmFtZSI6ImNhcmxvcyIsInN1cm5hbWUiOiJkZSBsYSBjcnV6Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NzY5NzY4LCJleHAiOjE3MDk3ODA1Njh9.S8K8zCyG8Y3nKXrlbHBCTCy4PF9GWO1UMpjR8srnjNU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "actualPassword",
+                        "value": "12"
+                    },
+                    {
+                        "name": "newPassword",
+                        "value": "1"
+                    }
+                ]
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
             "_id": "3f8a7461-2a5a-410a-903a-f0876ac40c68",
             "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
             "containerId": "f8f3d6eb-c7ed-4608-b5bd-a38cbb8ce74b",
             "name": "delete user",
-            "url": "/user/delete/65e807410727e6000d467339",
+            "url": "/user/delete/65e9481f62cbcff006760320",
             "method": "DELETE",
             "sortNum": 190000,
             "created": "2024-03-06T05:57:19.207Z",
-            "modified": "2024-03-06T06:04:28.871Z",
+            "modified": "2024-03-07T06:18:40.867Z",
             "headers": [
                 {
                     "name": "authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjFjMjhiYWRjYzcwYzI5NTUzY2QiLCJ1c2VybmFtZSI6ImRlZmF1bHQiLCJlbWFpbCI6ImRlZmF1bHRAZ21haWwuY29tIiwibmFtZSI6IkRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTcwNTA1OSwiZXhwIjoxNzA5NzE1ODU5fQ.oNMBNuOOfeFXUoWmHcdrIxGLBdfpKL1kGsHrd9QUW_g"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZWY1Y2M1ZjAwNWM5NGJjOGEzMDIiLCJ1c2VybmFtZSI6ImNkbGMiLCJlbWFpbCI6ImNkbGNAZ21haWwuY29tIiwibmFtZSI6ImNhcmxvcyIsInN1cm5hbWUiOiJkZSBsYSBjcnV6Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NzkyMjk1LCJleHAiOjE3MDk4MDMwOTV9.3JXcTkSh7dvRvrMl39xFczP3tEvZykMrvutV90jlNYI"
                 }
             ],
             "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "validate",
+                        "value": "CONFIRM"
+                    }
+                ]
+            },
+            "reqType": "del",
             "tests": []
         }
     ],
