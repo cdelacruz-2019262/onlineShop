@@ -35,6 +35,8 @@ const userSchema = Schema({
         required: true,
         enum: ['ADMIN', 'CLIENT']
     }
+},{
+    versionKey: false 
 })
 
 export default model('user', userSchema)

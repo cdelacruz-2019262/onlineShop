@@ -14,3 +14,4 @@ export const generateJwt = async (payload) => {
         return err
     }
 }
+

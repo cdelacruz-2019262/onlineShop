@@ -74,3 +74,22 @@ export const erase = async (req, res) => {
         return res.status(500).send({ message: 'Error deleting category' })
     }
 }
+
+export const defaultCategory = async (req, res) => {
+    try {
+        const categoryExist = await Category.findOne({ name: 'miscellaneous' })
+
+        if (categoryExist) {
+            return console.log('The miscellaneous category already exists')
+        }
+        let data = {
+            name: 'miscellaneous',
+            description: 'uncategorized articles'
+        }
+        let category = new Category(data)
+        await category.save()
+        return res.send({ message: 'Updated category', data })
+    } catch (err) {
+        console.error(err)
+    }
+}
