@@ -26,4 +26,4 @@ const billSchema = Schema({
     versionKey: false 
 })
 
-export default model('buyCar', buyCarSchema)
+export default model('bill', billSchema)

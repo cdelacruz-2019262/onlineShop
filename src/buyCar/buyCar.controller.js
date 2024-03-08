@@ -19,6 +19,7 @@ export const addProduct = async (req, res) => {
             car = new BuyCar({ client: uid, products: [] })
         }
 
+        //restar el amount del stock
         let items = await Product.findById(product)
         if (!items) {
             return res.status(404).send({ message: 'Product not found' })
@@ -28,6 +29,8 @@ export const addProduct = async (req, res) => {
             return res.status(404).send({ message: 'Insufficient products' })
         }
         items.stock = items.stock - parseInt(amount)
+
+        //guardar items
         await items.save()
 
         let existence = car.products.findIndex(item => item.product.toString() === product.toString())
