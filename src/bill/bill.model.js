@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const buyCarSchema = Schema({
+const billSchema = Schema({
     
     user: {
         type: Schema.Types.ObjectId,
@@ -10,7 +10,7 @@ const buyCarSchema = Schema({
     products: [{
         product: {
             type: Schema.Types.ObjectId,
-            ref: 'product',
+            ref: 'products',
             required: false
         },
         amount: {

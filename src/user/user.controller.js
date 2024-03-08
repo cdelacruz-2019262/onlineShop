@@ -1,5 +1,5 @@
 import User from './user.model.js'
-import BuyCar from '../buyCar/buycar.model.js'
+import BuyCar from '../buyCar/buyCar.model.js'
 import { encrypt, checkPassword, checkUserUpdate } from '../utils/validator.js'
 import { generateJwt } from '../utils/jwt.js'
 

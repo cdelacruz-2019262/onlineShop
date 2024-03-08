@@ -2,8 +2,11 @@
 
 import mongoose from "mongoose"
 
+
 export const connect = async() =>{
     try{
+        mongoose.models = {};
+
         //proceso de conexion
         mongoose.connection.on('error', ()=>{
             console.log('MongoDB | could not be connect to mongodb')

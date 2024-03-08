@@ -1,6 +1,7 @@
 'use strict'
 
 import Product from './product.model.js'
+import Category from '../category/category.model.js';
 import { checkProductUpdate } from '../utils/validator.js'
 
 export const test = (req, res) => {
@@ -45,6 +46,23 @@ export const search = async (req, res) => {
     }
 }
 
+export const searchByCategory = async (req, res) => {
+    try {
+        let { search } = req.body
+        let category = await Category.find(
+            { name: search }
+        ).select('_id')
+        if (!category) return res.status(404).send({ menssage: 'category not found' })
+        let product = await Product.find(
+            { category: category }
+        ).populate('category')
+        return res.send({ menssage: 'Product found', product })
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({ menssage: 'Error searching product' })
+    }
+}
+
 export const erase = async (req, res) => {
     try {
         let { id } = req.params
@@ -60,8 +78,8 @@ export const erase = async (req, res) => {
 export const update = async (req, res) => {
     try {
         let data = req.body
-        let { id } = req.params        
-        
+        let { id } = req.params
+
         if (data.category) {
             return res.status(400).send({ message: 'you can`t update a foreign key' });
         }

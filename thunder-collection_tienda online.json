@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tienda online",
-    "dateExported": "2024-03-07T06:57:40.466Z",
+    "dateExported": "2024-03-08T09:07:34.365Z",
     "version": "1.1",
     "folders": [
         {
@@ -24,6 +24,20 @@
             "containerId": "",
             "created": "2024-03-06T04:04:15.874Z",
             "sortNum": 30000
+        },
+        {
+            "_id": "12770df3-7e17-4c38-9805-59f91ba5c75b",
+            "name": "buyCar",
+            "containerId": "",
+            "created": "2024-03-07T21:38:14.601Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "b649e1c9-1b38-47d3-9e5e-dde28e818b84",
+            "name": "bill",
+            "containerId": "",
+            "created": "2024-03-08T07:55:25.603Z",
+            "sortNum": 50000
         }
     ],
     "requests": [
@@ -51,7 +65,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T04:04:15.887Z",
-            "modified": "2024-03-07T06:18:15.061Z",
+            "modified": "2024-03-08T07:25:32.030Z",
             "headers": [],
             "params": [],
             "body": {
@@ -60,7 +74,7 @@
                 "form": [
                     {
                         "name": "username",
-                        "value": "cdlc"
+                        "value": "rdiaz"
                     },
                     {
                         "name": "password",
@@ -100,11 +114,11 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T04:04:15.875Z",
-            "modified": "2024-03-07T06:40:33.418Z",
+            "modified": "2024-03-08T01:33:36.242Z",
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZWY1Y2M1ZjAwNWM5NGJjOGEzMDIiLCJ1c2VybmFtZSI6ImNkbGMiLCJlbWFpbCI6ImNkbGNAZ21haWwuY29tIiwibmFtZSI6ImNhcmxvcyIsInN1cm5hbWUiOiJkZSBsYSBjcnV6Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NzkyMjk1LCJleHAiOjE3MDk4MDMwOTV9.3JXcTkSh7dvRvrMl39xFczP3tEvZykMrvutV90jlNYI"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNWYwMjcwMjRkYTZiYjgxNjgyN2UiLCJ1c2VybmFtZSI6ImRlZmF1bHQiLCJlbWFpbCI6ImRlZmF1bHRAZ21haWwuY29tIiwibmFtZSI6IkRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg2MTYwNywiZXhwIjoxNzA5ODcyNDA3fQ.KbofF-CExnux4HeEeMGqX3J15kvNTBCtDO_t8Tr7pRs"
                 }
             ],
             "params": [],
@@ -223,8 +237,13 @@
             "method": "POST",
             "sortNum": 100000,
             "created": "2024-03-06T04:04:15.880Z",
-            "modified": "2024-03-06T04:58:20.237Z",
-            "headers": [],
+            "modified": "2024-03-08T07:21:46.471Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNWYwMjcwMjRkYTZiYjgxNjgyN2UiLCJ1c2VybmFtZSI6ImRlZmF1bHQiLCJlbWFpbCI6ImRlZmF1bHRAZ21haWwuY29tIiwibmFtZSI6IkRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg4MjQzMCwiZXhwIjoxNzA5ODkzMjMwfQ.LiyL740bx9LYkS1Pv0qInCQ_bHsqRT-R6tkJ0-lpwGo"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "formencoded",
@@ -232,23 +251,23 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "desinfectante"
+                        "value": "limon"
                     },
                     {
                         "name": "description",
-                        "value": "desinfectante ariel"
+                        "value": "limon limoso"
                     },
                     {
                         "name": "price",
-                        "value": "120.00"
+                        "value": "12.00"
                     },
                     {
                         "name": "stock",
-                        "value": "23"
+                        "value": "1500"
                     },
                     {
                         "name": "category",
-                        "value": "65d7fbfc9866d51617492bf8"
+                        "value": "65ea5f027024da6bb816827a"
                     }
                 ]
             },
@@ -279,7 +298,7 @@
             "method": "POST",
             "sortNum": 120000,
             "created": "2024-03-06T04:04:15.882Z",
-            "modified": "2024-03-06T04:58:31.761Z",
+            "modified": "2024-03-08T05:31:00.482Z",
             "headers": [],
             "params": [],
             "body": {
@@ -288,7 +307,32 @@
                 "form": [
                     {
                         "name": "search",
-                        "value": "soap"
+                        "value": "desinfectante"
+                    }
+                ]
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "449d554c-fd17-4144-a343-753e0e6bb75c",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "70bc6658-617b-42ad-9bfb-d37602aac288",
+            "name": "search product Copy",
+            "url": "/product/search/category",
+            "method": "POST",
+            "sortNum": 125000,
+            "created": "2024-03-08T05:29:02.758Z",
+            "modified": "2024-03-08T05:38:10.632Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "cleaner"
                     }
                 ]
             },
@@ -555,6 +599,123 @@
                 ]
             },
             "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "18d73659-c78d-4085-9cbc-cda7e87398cb",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "12770df3-7e17-4c38-9805-59f91ba5c75b",
+            "name": "test",
+            "url": "/car/test",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-03-07T21:38:34.117Z",
+            "modified": "2024-03-07T22:15:34.360Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "5bf86d3e-1992-479d-a9ed-c5220a30f295",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "12770df3-7e17-4c38-9805-59f91ba5c75b",
+            "name": "add product",
+            "url": "/car/add/product",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2024-03-07T22:07:21.555Z",
+            "modified": "2024-03-08T07:30:21.516Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNmE3ZjIyZTQxNDNjMTYzNzQ1MDQiLCJ1c2VybmFtZSI6InJkaWF6IiwiZW1haWwiOiJyZGlhekB5YWhvby5jb20iLCJuYW1lIjoicm9kcmlnbyAiLCJzdXJuYW1lIjoiZGlheiIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3MDk4ODI3MzEsImV4cCI6MTcwOTg5MzUzMX0.kAXeqVJMgJzetoC6qT6Ki6Asu9BKmRKqzPo5vmtZlQg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "product",
+                        "value": "65eabc8922fee3d523d9d960"
+                    },
+                    {
+                        "name": "amount",
+                        "value": "10"
+                    }
+                ]
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "a891010a-e136-4889-bafb-3dcec5b2cb2b",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "12770df3-7e17-4c38-9805-59f91ba5c75b",
+            "name": "remove product",
+            "url": "/car/remove/product",
+            "method": "PUT",
+            "sortNum": 230000,
+            "created": "2024-03-08T02:40:56.614Z",
+            "modified": "2024-03-08T08:59:14.125Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNmE3ZjIyZTQxNDNjMTYzNzQ1MDQiLCJ1c2VybmFtZSI6InJkaWF6IiwiZW1haWwiOiJyZGlhekB5YWhvby5jb20iLCJuYW1lIjoicm9kcmlnbyAiLCJzdXJuYW1lIjoiZGlheiIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3MDk4ODY2MTQsImV4cCI6MTcwOTg5NzQxNH0.z7SlvBn9lQRY8eOxqkRJuJlTm5_iSbWB-xUtfoSVrhQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "product",
+                        "value": "65eabc8922fee3d523d9d960"
+                    },
+                    {
+                        "name": "amount",
+                        "value": "20"
+                    }
+                ]
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "f694bd46-8c9f-4929-8a51-c579871deee8",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "b649e1c9-1b38-47d3-9e5e-dde28e818b84",
+            "name": "test bill",
+            "url": "/bill/test",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-03-08T07:56:10.789Z",
+            "modified": "2024-03-08T07:58:52.667Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "49ee73b9-190f-4a4f-b999-a32ac71aee26",
+            "colId": "4e8006a0-3058-41db-a196-9c4e40d43be2",
+            "containerId": "b649e1c9-1b38-47d3-9e5e-dde28e818b84",
+            "name": "print bill",
+            "url": "/bill/print",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2024-03-08T08:28:27.964Z",
+            "modified": "2024-03-08T08:31:48.639Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNmE3ZjIyZTQxNDNjMTYzNzQ1MDQiLCJ1c2VybmFtZSI6InJkaWF6IiwiZW1haWwiOiJyZGlhekB5YWhvby5jb20iLCJuYW1lIjoicm9kcmlnbyAiLCJzdXJuYW1lIjoiZGlheiIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3MDk4ODY2MTQsImV4cCI6MTcwOTg5NzQxNH0.z7SlvBn9lQRY8eOxqkRJuJlTm5_iSbWB-xUtfoSVrhQ"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
             "tests": []
         }
     ],
