@@ -173,7 +173,7 @@ export const erase = async (req, res) => {
     }
 }
 
-export const defaultUser = async (req, res) => {
+export const defaultUser = async () => {
     try {
         const userExist = await User.findOne({ username: 'default' })
 
@@ -190,7 +190,7 @@ export const defaultUser = async (req, res) => {
         }
         let user = new User(data)
         await user.save()
-        return res.send({ message: 'Updated user', data })
+        return console.log( 'Updated user', data )
     } catch (err) {
         console.error(err)
     }

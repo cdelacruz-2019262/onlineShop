@@ -63,6 +63,16 @@ export const searchByCategory = async (req, res) => {
     }
 }
 
+export const searchOutOfStock = async (req,res) => {
+    try{
+        let product = await Product.find({stock: 0})
+        return res.send({ menssage: 'Out of stock products found', product })
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({ menssage: 'Error searching out of stock product' })
+    }
+}
+
 export const erase = async (req, res) => {
     try {
         let { id } = req.params

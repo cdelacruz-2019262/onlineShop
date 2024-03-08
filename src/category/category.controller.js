@@ -87,7 +87,7 @@ export const erase = async (req, res) => {
     }
 }
 
-export const defaultCategory = async (req, res) => {
+export const defaultCategory = async () => {
     try {
         const categoryExist = await Category.findOne({ name: 'miscellaneous' })
 
@@ -100,7 +100,7 @@ export const defaultCategory = async (req, res) => {
         }
         let category = new Category(data)
         await category.save()
-        return res.send({ message: 'Updated category', data })
+        return console.log( 'added category', data )
     } catch (err) {
         console.error(err)
     }
