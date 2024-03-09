@@ -1,7 +1,7 @@
 'use strict'
 
 import { Router } from "express"
-import { test, save, get, search, erase, update, searchByCategory, searchOutOfStock} from './product.controller.js'
+import { test, save, get, search, erase, update, searchByCategory, searchOutOfStock, getMostSoldItems} from './product.controller.js'
 import { isAdmin, validateJwt } from '../middlewares/validate-jwt.js'
 
 const api = Router()
@@ -14,6 +14,6 @@ api.post('/search/category',  searchByCategory)
 api.get('/search/outOfStock',  searchOutOfStock)
 api.delete('/delete/:id', [validateJwt, isAdmin], erase)
 api.put('/update/:id', [validateJwt, isAdmin], update)
-
+api.get('/get/mostSold' , getMostSoldItems )
 
 export default api

@@ -16,7 +16,7 @@ export const printBill = async (req, res) => {
         let uid = req.user._id
         let bill = await Bill.findOne(
             { user: uid }
-        )
+        ).populate('user').populate('products.product')
         let user = await User.findById(uid)
         //console.log(user)
 
@@ -29,7 +29,7 @@ export const printBill = async (req, res) => {
             const productData = await Product.findById(item.product);
             if (productData) {
                 billItems.push({
-                    product: item.product,
+                    product: productData._id,
                     amount: item.amount
                 });
             }
@@ -37,10 +37,11 @@ export const printBill = async (req, res) => {
 
         const buy = new Saver({
             user: bill.user,
-            items: billItems,
-            totalAmount: bill.total
+            products: billItems,
+            total: bill.total
         });
         const savedBill = await buy.save();
+        console.log(savedBill);
 
 
         // create a new PDF document
@@ -48,31 +49,38 @@ export const printBill = async (req, res) => {
         const filePath = path.resolve('bill.pdf')
         print.pipe(fs.createWriteStream(filePath))
         print.fontSize(18)
+        print.font('Helvetica-Bold')
         print.text("Bill", { align: 'center' })
+        print.font('Helvetica-Oblique')
         print.text("____________________________________________________________________", { align: 'center' })
         print.moveDown()
 
-        print.text(`Date ${Date.now()}`)
+        print.text(`Date ${new Date().toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`)
+        print.text(`Time ${new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric' })}`)
         print.text(`Client: ${user.name} `)
-        print.moveDown()
+        print.text(`________________________`)
+        
 
         print.text('Products list')
         print.text('_____________')
-        print.moveDown()
+        
 
         bill.products.forEach((products, index) => {
-            let pid = products.product
-            const prod = Product.findById(pid)
-            //console.log(prod)
-            print.text(`${index + 1}, ${products.product}`)
+            print.text(`${index + 1}, name ${products.product.name}`)
+            print.text(` Unitary price ${products.product.price}`)
             print.text(`Amount: ${products.amount}`)
+            print.moveDown()
         })
         print.moveDown()
 
-        print.text(`________________________`)
-        print.text(`Total: Q${bill.total}`)
+        print.text(`________________________`, { align: 'right' })
+        print.font('Helvetica-Bold')
+        print.text(`Total: Q${bill.total}`, { align: 'right' })
         print.end()
         res.sendFile(filePath);
+        if (bill) {
+            await Bill.updateMany({ user: uid }, { $set: { products: [] }})
+        }
         return res.send({ message: "printed!" })
 
     } catch (err) {

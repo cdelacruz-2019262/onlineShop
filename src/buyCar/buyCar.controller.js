@@ -81,6 +81,7 @@ export const removeProduct = async (req, res) => {
                 car.products[existence].amount -= parseInt(amount)
             }
         }
+        
         await items.save()
         await car.save()
         return res.send({ message: 'Has been successfully removed product to the shopping car' })

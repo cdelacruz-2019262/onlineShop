@@ -1,5 +1,6 @@
 'use strict'
 
+import Bill from '../bill/bill.model.js';
 import Product from './product.model.js'
 import Category from '../category/category.model.js';
 import { checkProductUpdate } from '../utils/validator.js'
@@ -36,9 +37,9 @@ export const search = async (req, res) => {
     try {
         let { search } = req.body
         let product = await Product.find(
-            { name: search }
+            { name: { $regex: search, $options: 'i' } }
         ).populate('category')
-        if (!product) return res.status(404).send({ menssage: 'Product not found' })
+        if (products.length === 0) return res.status(404).send({ menssage: 'Product not found' })
         return res.send({ menssage: 'Product found', product })
     } catch (err) {
         console.error(err)
@@ -70,6 +71,46 @@ export const searchOutOfStock = async (req,res) => {
     }catch(err){
         console.error(err)
         return res.status(500).send({ menssage: 'Error searching out of stock product' })
+    }
+}
+
+export const getMostSoldItems = async (req, res) => {
+    try {
+        const bills = await Bill.find();
+
+        // Crear un objeto para almacenar la cantidad de ventas de cada producto
+        let soldItems = {};
+
+        //contar la cantidad de cada producto vendido
+        bills.forEach(bill => {
+            bill.products.forEach(product => {
+                const productId = product.product;
+                const amount = product.amount;
+
+                if (soldItems[productId]) {
+                    soldItems[productId] += amount;
+                } else {
+                    soldItems[productId] = amount;
+                }
+            });
+        });
+
+        // Ordenar los productos por la cantidad vendida en orden descendente
+        const sortedProductos = Object.entries(soldItems).sort((a, b) => b[1] - a[1]);
+
+        // Obtener los detalles de los productos más vendidos
+        let mostSoldItems = [];
+        for (let [productId, quantity] of sortedProductos) {
+            const product = await Product.findById(productId);
+            if (product) {
+                mostSoldItems.push({ product, quantity });
+            }
+        }
+
+        return res.send({ message: 'Productos más vendidos encontrados', mostSoldItems });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send({ message: 'Error al obtener los productos más vendidos' });
     }
 }
 
