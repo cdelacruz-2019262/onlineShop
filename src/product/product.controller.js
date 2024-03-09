@@ -39,7 +39,7 @@ export const search = async (req, res) => {
         let product = await Product.find(
             { name: { $regex: search, $options: 'i' } }
         ).populate('category')
-        if (products.length === 0) return res.status(404).send({ menssage: 'Product not found' })
+        if (product.length === 0) return res.status(404).send({ menssage: 'Product not found' })
         return res.send({ menssage: 'Product found', product })
     } catch (err) {
         console.error(err)

@@ -1,5 +1,6 @@
 import User from './user.model.js'
 import BuyCar from '../buyCar/buyCar.model.js'
+import Buy from '../bill/bill.model.js'
 import { encrypt, checkPassword, checkUserUpdate } from '../utils/validator.js'
 import { generateJwt } from '../utils/jwt.js'
 
@@ -65,6 +66,7 @@ export const login = async (req, res) => {
         })
         //Verifico que la contraseña coincida
         if (user && await checkPassword(password, user.password)) {
+
             let loggedUser = {
                 uid: user._id,
                 username: user.username,
@@ -74,11 +76,16 @@ export const login = async (req, res) => {
                 role: user.role
             }
             let token = await generateJwt(loggedUser)
+            let buys = await Buy.find(
+                { user: user._id }
+            )
+
             return res.send(
                 {
                     message: `Welcome ${loggedUser.name}`,
                     loggedUser,
-                    token
+                    token,
+                    buys
                 }
             )
         }
@@ -126,9 +133,9 @@ export const updatePassword = async (req, res) => {
                 return res.status(400).send({ message: 'Missing current or new password in request body' });
             }
             const originalPassword = checkPassword(token.password,
-                 actualPassword)
+                actualPassword)
             if (originalPassword) {
-                
+
                 const encriptedPassword = await encrypt(newPassword)
                 const updatedPassword = await User.findOneAndUpdate(
                     { _id: id },
@@ -158,8 +165,8 @@ export const erase = async (req, res) => {
         const tokenId = req.user;
         let { id } = req.params
         let { validate } = req.body
-        if (!validate) return res.status(400).send({message: 'Write autorization word "CONFIRM"'})
-        if (validate !== 'CONFIRM') return res.status(400).send({message: 'This is not the authorization word "CONFIRM"'})
+        if (!validate) return res.status(400).send({ message: 'Write autorization word "CONFIRM"' })
+        if (validate !== 'CONFIRM') return res.status(400).send({ message: 'This is not the authorization word "CONFIRM"' })
         if (tokenId._id.toString() === id || req.user.role === 'ADMIN') {
             let deletedUser = await User.findOneAndDelete({ _id: id })
             if (!deletedUser) return res.status(404).send({ message: 'Account not found and not deleted' })
@@ -190,7 +197,7 @@ export const defaultUser = async () => {
         }
         let user = new User(data)
         await user.save()
-        return console.log( 'Updated user', data )
+        return console.log('Updated user', data)
     } catch (err) {
         console.error(err)
     }
